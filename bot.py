@@ -9,7 +9,7 @@ def scan(update, context):
         return
 
     target = context.args[0]
-    cmd = f"/root/go/bin/httpx -u {target} -title -sc"
+    cmd = f"httpx -u {target} -title -sc"
     result = subprocess.getoutput(cmd)
 
     update.message.reply_text(result[:3500])
