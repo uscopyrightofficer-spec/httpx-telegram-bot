@@ -1,5 +1,8 @@
 #!/bin/bash
-apt-get update
-apt-get install -y golang-go
-go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+
+curl -L https://github.com/projectdiscovery/httpx/releases/download/v1.6.5/httpx_1.6.5_linux_amd64.zip -o httpx.zip
+unzip httpx.zip
+chmod +x httpx
+mv httpx /usr/local/bin/
+
 python bot.py
